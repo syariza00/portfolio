@@ -1,147 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Security-Focused Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhammad Faiz Fatullah | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-<style>
-:root{
-  --bg:#0a0e27;
-  --glass:rgba(255,255,255,0.06);
-  --border:rgba(255,255,255,0.12);
-  --text:#d1d5db;
-  --violet:#8b5cf6;
-  --blue:#60a5fa;
-  --cyan:#22d3ee;
-}
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
 
-*{margin:0;padding:0;box-sizing:border-box;font-family:Inter;}
-body{
-  background: radial-gradient(circle at top left,#8b5cf640,transparent),
-              radial-gradient(circle at bottom right,#60a5fa40,transparent),
-              var(--bg);
-  color:white;
-  scroll-behavior:smooth;
-}
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #020617, #1e293b, #0f766e);
+      padding: 70px 10%;
+      text-align: center;
+    }
 
-/* NAV */
-nav{
-  position:fixed;
-  top:0;
-  width:100%;
-  background:rgba(10,14,39,0.6);
-  backdrop-filter:blur(18px);
-  padding:15px;
-  z-index:1000;
-  text-align:center;
-}
-nav a{
-  color:#fff;
-  margin:0 10px;
-  text-decoration:none;
-  font-size:14px;
-}
-nav a:hover{color:var(--cyan);}
+    header h1 {
+      font-size: 2.5rem;
+      color: #fff;
+    }
 
-/* LAYOUT */
-.container{width:90%;max-width:1100px;margin:auto;}
-section{padding:90px 0;}
+    header h2 {
+      color: #5eead4;
+      font-weight: normal;
+      margin-top: 10px;
+    }
 
-/* TITLE */
-.title{
-  font-size:2.4rem;
-  font-weight:800;
-  background:linear-gradient(to right,#fff,#a78bfa,#60a5fa);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  margin-bottom:10px;
-}
+    /* NAVBAR FIX */
+    nav {
+      background: #020617;
+      padding: 15px 10%;
+      position: sticky;
+      top: 0;
+      z-index: 9999;
+      border-bottom: 1px solid #1e293b;
 
-/* GLASS CARD */
-.card{
-  background:var(--glass);
-  border:1px solid var(--border);
-  padding:25px;
-  border-radius:18px;
-  margin-top:15px;
-  transition:0.3s;
-}
-.card:hover{
-  transform:translateY(-5px);
-  border-color:rgba(139,92,246,0.4);
-}
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
 
-/* HERO */
-.hero{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  text-align:center;
-}
+    nav a {
+      color: #e5e7eb;
+      text-decoration: none;
+      font-size: 0.95rem;
+      padding: 8px 10px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
 
-/* TAG */
-.tag{
-  display:inline-block;
-  padding:6px 12px;
-  margin:5px;
-  border-radius:999px;
-  background:rgba(139,92,246,0.15);
-  border:1px solid rgba(139,92,246,0.3);
-  color:#d8b4fe;
-  font-size:12px;
-}
+    nav a:hover {
+      background: #0f766e;
+      color: white;
+    }
 
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-}
+    section {
+      padding: 60px 10%;
+      scroll-margin-top: 80px; /* IMPORTANT FIX NAV SCROLL */
+    }
 
-/* PROFILE IMAGE */
-.profile-img{
-  width:160px;
-  height:160px;
-  border-radius:50%;
-  border:4px solid var(--cyan);
-  margin-bottom:15px;
-}
+    .section-title {
+      font-size: 2rem;
+      color: #5eead4;
+      margin-bottom: 25px;
+      border-left: 5px solid #5eead4;
+      padding-left: 15px;
+    }
 
-/* BUTTON */
-.btn{
-  display:inline-block;
-  margin-top:10px;
-  padding:10px 14px;
-  background:linear-gradient(to right,var(--violet),var(--blue));
-  color:white;
-  border-radius:10px;
-  text-decoration:none;
-}
+    .card {
+      background: #1e293b;
+      padding: 25px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      border: 1px solid #334155;
+    }
 
-/* SECTION TITLE */
-h2{
-  font-size:1.8rem;
-  margin-bottom:10px;
-  color:var(--cyan);
-}
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
 
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:30px;
-  border-top:1px solid rgba(255,255,255,0.1);
-  color:#aaa;
-}
-</style>
+    .tag {
+      display: inline-block;
+      background: #0f766e;
+      padding: 8px 12px;
+      border-radius: 20px;
+      margin: 5px;
+      font-size: 0.9rem;
+    }
+
+    .button-link {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 16px;
+      background: #0f766e;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+    }
+
+    .button-link:hover {
+      background: #14b8a6;
+      color: #020617;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #020617;
+      color: #94a3b8;
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- NAV -->
+<header>
+  <h1>Muhammad Faiz Fatullah</h1>
+  <h2>Software Developer (Security-Focused)</h2>
+</header>
+
+<!-- NAVBAR -->
 <nav>
   <a href="#profile">Profile</a>
   <a href="#career">Career</a>
@@ -151,158 +144,77 @@ footer{
   <a href="#skills">Skills</a>
   <a href="#plan">Plan</a>
   <a href="#reflection">Reflection</a>
+  <a href="#contact">Contact</a>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container">
-    <img src="profile.jpg" class="profile-img">
-    <h1 class="title">Muhammad Faiz Fatullah</h1>
-    <p>Software Developer (Security-Focused) | Cybersecurity & Web Development Enthusiast</p>
+<!-- SECTIONS -->
+<section id="profile">
+  <h2 class="section-title">Profile</h2>
+  <div class="card">
+    <p>Computer Science student focusing on secure software development...</p>
   </div>
 </section>
 
-<!-- PROFILE -->
-<section id="profile">
-<div class="container">
-<h2>Profile Summary</h2>
-<div class="card">
-I am a Computer Science student specializing in Internet Computing with strong interest in secure software development, web systems and cybersecurity.
-</div>
-</div>
-</section>
-
-<!-- CAREER -->
 <section id="career">
-<div class="container">
-<h2>Career</h2>
-<div class="card">
-<h3>Software Developer (Security-Focused)</h3>
-<ul>
-<li>Secure web application development</li>
-<li>Authentication & authorization</li>
-<li>Input validation & encryption</li>
-<li>Database security</li>
-</ul>
-</div>
-</div>
+  <h2 class="section-title">Career</h2>
+  <div class="card">
+    <p>Security-focused software developer role description...</p>
+  </div>
 </section>
 
-<!-- EDUCATION -->
 <section id="education">
-<div class="container">
-<h2>Education</h2>
-
-<div class="card">
-<h3>Bachelor of Computer Science (Internet Computing)</h3>
-<p>UniSZA | CGPA: 3.65</p>
-</div>
-
-<div class="card">
-<h3>Diploma in IT</h3>
-<p>UniSZA | CGPA: 3.35</p>
-</div>
-
-</div>
+  <h2 class="section-title">Education</h2>
+  <div class="card">
+    <p>UniSZA Computer Science (Internet Computing)</p>
+  </div>
 </section>
 
-<!-- EXPERIENCE -->
 <section id="experience">
-<div class="container">
-<h2>Experience</h2>
-
-<div class="card">
-<h3>Freelance Web Developer</h3>
-<ul>
-<li>Developed secure web systems using Laravel & CodeIgniter</li>
-<li>Implemented authentication systems</li>
-<li>Handled database integration</li>
-</ul>
-</div>
-
-</div>
+  <h2 class="section-title">Experience</h2>
+  <div class="card">
+    <p>Freelance Web Developer</p>
+  </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects">
-<div class="container">
-<h2>Projects</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Gym Management System</h3>
-<p>Gamification-based system with secure login & role management.</p>
-<a class="btn" href="#">View</a>
-</div>
-
-<div class="card">
-<h3>Fiqhoria System</h3>
-<p>Web-based learning resource platform.</p>
-<a class="btn" href="#">View</a>
-</div>
-
-</div>
-</div>
+  <h2 class="section-title">Projects</h2>
+  <div class="card">
+    <p>Gym System + Fiqhoria Project</p>
+  </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
-<div class="container">
-<h2>Skills</h2>
-
-<div class="card">
-<h3>Technical</h3>
-<span class="tag">PHP</span>
-<span class="tag">Laravel</span>
-<span class="tag">CodeIgniter</span>
-<span class="tag">JavaScript</span>
-<span class="tag">MySQL</span>
-</div>
-
-<div class="card">
-<h3>Cybersecurity</h3>
-<span class="tag">OWASP</span>
-<span class="tag">Secure Coding</span>
-<span class="tag">Authentication</span>
-<span class="tag">Networking</span>
-</div>
-
-</div>
+  <h2 class="section-title">Skills</h2>
+  <div class="card">
+    <span class="tag">PHP</span>
+    <span class="tag">Laravel</span>
+    <span class="tag">CodeIgniter</span>
+  </div>
 </section>
 
-<!-- PLAN -->
 <section id="plan">
-<div class="container">
-<h2>Career Plan</h2>
-
-<div class="card">
-<h3>Short Term</h3>
-Internship + Security+ Certification
-</div>
-
-<div class="card">
-<h3>Long Term</h3>
-Become DevSecOps / Security Software Engineer
-</div>
-
-</div>
+  <h2 class="section-title">Plan</h2>
+  <div class="card">
+    <p>Career development plan...</p>
+  </div>
 </section>
 
-<!-- REFLECTION -->
 <section id="reflection">
-<div class="container">
-<h2>Reflection</h2>
+  <h2 class="section-title">Reflection</h2>
+  <div class="card">
+    <p>Dream company: PETRONAS...</p>
+  </div>
+</section>
 
-<div class="card">
-I aim to improve cybersecurity skills and contribute to secure software development in industry.
-</div>
-
-</div>
+<section id="contact">
+  <h2 class="section-title">Contact</h2>
+  <div class="card">
+    <p>Email: faizfatullah223@gmail.com</p>
+  </div>
 </section>
 
 <footer>
-© 2026 Portfolio | Security-Focused Developer
+  <p>© 2026 Portfolio</p>
 </footer>
 
 </body>
